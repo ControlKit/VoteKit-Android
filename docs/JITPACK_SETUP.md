@@ -254,7 +254,7 @@ dependencies {
 Add to your `local.properties` file:
 
 ```properties
-API_URL="https://your-api-domain.com/api/force-updates"
+API_URL="https://your-api-domain.com/api/votes"
 ```
 
 ### Step 4: Use in Your App
@@ -280,3 +280,5 @@ fun MyApp() {
 ---
 
 **Congratulations!** Your VoteKit library is now available on JitPack for the Android community to use! 🎉
+
+Copyright (c) 2024 ControlKit

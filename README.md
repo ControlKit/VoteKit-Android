@@ -336,4 +336,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **VoteKit** - Empowering developers to create engaging voting experiences! 🗳️
 
+Copyright (c) 2024 ControlKit
+
 Made with ❤️ by the ControlKit team

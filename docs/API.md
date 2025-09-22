@@ -497,3 +497,7 @@ fun MyApp() {
 ```
 
 This API documentation provides comprehensive information about all the classes, methods, and properties available in the VoteKit library.
+
+---
+
+Copyright (c) 2024 ControlKit

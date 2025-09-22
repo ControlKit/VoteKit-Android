@@ -632,3 +632,7 @@ VoteViewConfig(
 ```
 
 These examples demonstrate the flexibility and power of VoteKit. Choose the approach that best fits your app's needs and design requirements.
+
+---
+
+Copyright (c) 2024 ControlKit

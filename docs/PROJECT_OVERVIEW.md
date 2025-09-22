@@ -171,7 +171,7 @@ POST /force-updates/{id}/submit  # Submit vote
 **Configuration:**
 ```properties
 # local.properties
-API_URL="https://your-api-domain.com/api/force-updates"
+API_URL="https://your-api-domain.com/api/votes"
 ```
 
 ### Request/Response Format
@@ -334,3 +334,5 @@ Headers:
 ---
 
 **VoteKit** - Empowering developers to create engaging voting experiences for their users! 🗳️
+
+Copyright (c) 2024 ControlKit
