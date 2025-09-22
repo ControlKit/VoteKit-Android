@@ -26,7 +26,7 @@ android {
             localPropertiesFile.inputStream().use { localProperties.load(it) }
         }
 
-        val apiUrl = localProperties.getProperty("API_URL") ?: "https://example.com/api/force-updates"
+        val apiUrl = localProperties.getProperty("API_URL") ?: "https://example.com/api/votes"
         buildConfigField("String", "API_URL", "\"$apiUrl\"")
     }
 

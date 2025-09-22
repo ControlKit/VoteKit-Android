@@ -83,7 +83,7 @@ fun MyApp() {
 Configure your API endpoint in `local.properties`:
 
 ```properties
-API_URL="https://your-api-domain.com/api/force-updates"
+API_URL="https://your-api-domain.com/api/votes"
 ```
 
 ## 🎨 UI Styles
