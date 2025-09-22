@@ -494,68 +494,6 @@ fun MyApp() {
 }
 ```
 
-## Testing Examples
-
-### Unit Test Example
-
-```kotlin
-@Test
-fun `should show vote dialog when poll available`() = runTest {
-    // Given
-    val mockApi = mockk<VoteApi>()
-    val mockResponse = VoteResponse(
-        id = "poll-1",
-        name = "User Satisfaction",
-        title = "How satisfied are you?",
-        voteOptions = listOf(
-            VoteOptions("1", "Very Satisfied", 1, "2024-01-01"),
-            VoteOptions("2", "Satisfied", 2, "2024-01-01")
-        )
-    )
-    
-    coEvery { mockApi.getData(any(), any(), any(), any(), any(), any()) } returns 
-        NetworkResult.Success(ApiVoteResponse(...))
-    
-    val viewModel = VoteViewModel(mockApi, mockLocalDataSource)
-    viewModel.setConfig(VoteServiceConfig(...))
-    
-    // When
-    viewModel.getData()
-    
-    // Then
-    val state = viewModel.state.value
-    assertTrue(state is ViewModelState.ShowView)
-}
-```
-
-### UI Test Example
-
-```kotlin
-@Test
-fun testVoteDialogDisplay() {
-    // Launch the app
-    composeTestRule.setContent {
-        MyApp()
-    }
-    
-    // Wait for vote dialog
-    composeTestRule.waitForIdle()
-    
-    // Verify dialog is displayed
-    composeTestRule.onNodeWithText("User Satisfaction Survey").assertIsDisplayed()
-    composeTestRule.onNodeWithText("Submit").assertIsDisplayed()
-    
-    // Select an option
-    composeTestRule.onNodeWithText("Very Satisfied").performClick()
-    
-    // Click submit button
-    composeTestRule.onNodeWithText("Submit").performClick()
-    
-    // Verify submission
-    composeTestRule.waitForIdle()
-}
-```
-
 ## Performance Examples
 
 ### Lazy Loading

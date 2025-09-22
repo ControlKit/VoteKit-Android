@@ -238,37 +238,6 @@ x-device-uuid: {deviceId}
 x-name: {name}
 ```
 
-## 🧪 Testing
-
-VoteKit includes comprehensive testing support:
-
-```kotlin
-@Test
-fun `should show vote dialog when poll available`() = runTest {
-    // Given
-    val mockApi = mockk<VoteApi>()
-    val mockResponse = VoteResponse(
-        id = "poll-1",
-        title = "How satisfied are you?",
-        voteOptions = listOf(
-            VoteOptions("1", "Very Satisfied", 1, "2024-01-01")
-        )
-    )
-    
-    coEvery { mockApi.getData(any(), any(), any(), any(), any(), any()) } returns 
-        NetworkResult.Success(ApiVoteResponse(...))
-    
-    val viewModel = VoteViewModel(mockApi, mockLocalDataSource)
-    
-    // When
-    viewModel.getData()
-    
-    // Then
-    val state = viewModel.state.value
-    assertTrue(state is ViewModelState.ShowView)
-}
-```
-
 ## 📚 Documentation
 
 - **[Project Overview](docs/PROJECT_OVERVIEW.md)** - Detailed project architecture and features
